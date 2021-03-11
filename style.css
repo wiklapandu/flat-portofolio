@@ -1,7 +1,11 @@
 .jumbotron {
-  padding-top: 2rem;
+  padding-top: 6rem;
   color: white;
   background-color: #212529;
+}
+section,
+footer {
+  padding-top: 6rem;
 }
 body {
   min-height: 2000px;
