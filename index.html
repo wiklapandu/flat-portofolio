@@ -146,30 +146,55 @@
     <!-- Galery -->
     <section id="gallery">
         <div class="container">
-            <div class="row">
+            <div class="row text-center mb-5">
                 <div class="col">
                     <h2>Gallery</h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-3">
                     <a href="#">
-                        <img src="" alt="">
+                        <img src="img/gallery/1.jpg" alt="" class="img-fluid gallery-img">
                     </a>
                 </div>
                 <div class="col-md-3">
                     <a href="#">
-                        <img src="" alt="">
+                        <img src="img/gallery/2.jpg" alt="" class="img-fluid gallery-img">
                     </a>
                 </div>
                 <div class="col-md-3">
                     <a href="#">
-                        <img src="" alt="">
+                        <img src="img/gallery/3.png" alt="" class="img-fluid gallery-img">
                     </a>
                 </div>
                 <div class="col-md-3">
                     <a href="#">
-                        <img src="" alt="">
+                        <img src="img/gallery/4.jpg" alt="" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/3.png" alt="" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/1.jpg" alt="" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/4.jpg" alt="" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/2.jpg" alt="" class="img-fluid gallery-img">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="img/gallery/1.jpg" alt="" class="img-fluid gallery-img">
                     </a>
                 </div>
             </div>
@@ -186,7 +211,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class=" col-8">
+                <div class="col-8">
                     <form>
                         <div class="mb-3">
                             <label for="name" class="form-label">Nama Lengkap</label>
@@ -232,10 +257,18 @@
     <!-- Aos -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+        const galleryImg = document.querySelectorAll('.gallery-img');
+        galleryImg.forEach((img, index) => {
+            img.dataset.aos = 'fade-down';
+            img.dataset.aosDelay = index * 100;
+            img.dataset.aosDuration = 1000;
+        });
         AOS.init({
             once: true
         });
     </script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <!-- custom js -->
     <script src="./script.js"></script>
 
