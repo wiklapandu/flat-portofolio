@@ -49,8 +49,8 @@
 
     <!-- Jumbotron -->
     <section id="home" class="jumbotron text-center">
-        <img src="./img/profile.jpg" class="rounded rounded-circle img-thumbnail" width="170">
-        <h1 class="display-4">Wikla Arlentera Pandu S</h1>
+        <img src="./img/profile.jpg" id="profileImg" class="rounded rounded-circle img-thumbnail" width="170">
+        <h1 class="display-4"></h1>
         <p class="lead">Student | Fullstack developer</p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#ffff" fill-opacity="1"
@@ -256,6 +256,20 @@
         crossorigin="anonymous"></script>
     <!-- Aos -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+
+    <script>
+        // Registrasi Plugin
+        gsap.registerPlugin(TextPlugin);
+        // animasikan mulai dari posisi awalnya durasi 1 detik posisi - 100 dan opacity 0
+        // gsap.from('#profileImg', { duration: 1, rotateY: 360, opacity: 0 });
+        gsap.to('.display-4', { duration: 2, delay: 2.5, text: 'Wikla Arlentera Pandu S' })
+        gsap.from('.lead', { duration: 1.5, delay: 3.5, y: -20, opacity: 0 })
+        gsap.from('.navbar', { duration: 2, y: '-100%', opacity: 0, ease: 'bounce' });
+        // gsap.from('.display-4', { duration: 1, x: '-50', opacity: 0, delay: 1.25, ease: 'back' })
+    </script>
     <script>
         const galleryImg = document.querySelectorAll('.gallery-img');
         galleryImg.forEach((img, index) => {
@@ -267,8 +281,6 @@
             once: true
         });
     </script>
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <!-- custom js -->
     <script src="./script.js"></script>
 
